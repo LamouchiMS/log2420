@@ -1,0 +1,65 @@
+.fa-globe {
+    font-size: 20px;
+}
+
+.nav-pills {
+    border-bottom: 1px solid lightgrey;
+}
+
+.label-bixi {
+    font-weight: bold;
+}
+
+.col-sm-8 {
+    border-left: 1px solid lightgrey;
+}
+
+.space-top {
+    padding-top: 50px;
+    padding: 0;
+}
+
+#home div:only-child {
+    margin-top: 25px;
+}
+
+#tags {
+    width: 300px;
+    padding: 10px;
+    outline: none;
+}
+
+.blue {
+    color: blue;
+}
+
+.blue-background {
+    background-color: blue;
+    height: 20px;
+}
+
+.row-etat {
+    margin: 0 !important;
+    padding: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col-etat {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.data-etat {
+    background-color: grey;
+    color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.alt-color {
+    background-color: red;
+}

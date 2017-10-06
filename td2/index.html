@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>BIXI</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href='/index.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='/index.js'></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Vélo Montréal</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Accueil</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="fa fa-globe"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class='container'>
+        <ul class="nav nav-pills">
+            <li class="active"><a data-toggle="pill" href="#home">Carte des stations</a></li>
+            <li><a data-toggle="pill" href="#menu1">Liste des stations</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <div class='container'>
+                    <div class='row'>
+                        <div class='col col-sm-4'>
+                            <div class="ui-widget">
+                                <input id="tags" placeholder="ex: du Mont-Royal / du Parc">
+                            </div>
+                            <h2 class='blue'>Localisation:</h2>
+                            <h3 id='selectionValue'>Aucune sélection</h3>
+                        </div>
+                        <div class='col col-sm-8'>
+                            <h2 class='blue'>État de la station de vélos</h2>
+                            <div class='blue-background'></div>
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>ID Station</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat'>6173</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Vélos displonibles</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat alt-color'>0</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Bloquée</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat'>Non</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Bornes displonibles</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat'>3</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Suspendue</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat alt-color'>Oui</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Vélo indisponible</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat'>1</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Hors service</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat'>Non</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class='row-etat'>
+                                                <div class='col-etat'>
+                                                    <span>Bornes indisponibles</span>
+                                                </div>
+                                                <div class='col-etat'>
+                                                    <span class='data-etat'>23</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+                <h1>État de toutes les stations de vélos</h1>
+                <table id="example" class="display" width="100%"></table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

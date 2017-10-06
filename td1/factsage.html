@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Main css -->
+    <link rel="stylesheet" type="text/css" href="./factsage.css">
+    <!-- MaterialIcons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Factsage</title>
+</head>
+
+<body>
+
+    <!-- Menu vertical -->
+    <div class='sideMenu'>
+        <a href='./factsage.html' class='logo'>FactSage</a>
+        <a class='menuItem'>
+            <i class="material-icons">home</i>
+            <span>Introduction</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">dns</i>
+            <span>Database documentation</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">apps</i>
+            <span>FactSage applications</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">public</i>
+            <span>Posters and publications</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">mic</i>
+            <span>Conferences and workshops</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">recent_actors</i>
+            <span>Ordering and representatives</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">color_lens</i>
+            <span>Phase diagrams & Documentation download</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">person</i>
+            <span>CRCT clients</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">language</i>
+            <span>Fact-Web</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">whatshot</i>
+            <span>FactSage 7.1 - News</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">alarm</i>
+            <span>FactSage 7.0 - News</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">file_download</i>
+            <span>Download service</span>
+        </a>
+        <a class='menuItem'>
+            <i class="material-icons">build</i>
+            <span>Installation instructions</span>
+        </a>
+    </div>
+
+    <div class='rightContainer'>
+
+        <!-- Menu horizontal -->
+        <div class='header'>
+
+            <div class='separator'></div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span>Info</span>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+                <div class="dropdown-content">
+                    <a id='general' href="#">General</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span>Databases</span>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Documentation</a>
+                    <a href="#">View data</a>
+                    <a href="#">Compound</a>
+                    <a href="#">Solution</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span>Calculate</span>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" id='reaction'>Reaction</a>
+                    <a href="#">Predom</a>
+                    <a href="#">EpH</a>
+                    <a href="#">Equilib</a>
+                    <a href="#">Phase diagram</a>
+                    <a href="#">OptiSage</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <span>Manipulate</span>
+                    <i class="material-icons">keyboard_arrow_down</i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Results</a>
+                    <a href="#">Mixture</a>
+                    <a href="#">Fact-XML</a>
+                    <a href="#">Figure</a>
+                    <a href="#">Viscosity</a>
+                    <a href="#">Quit</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenu principal -->
+        <div class='mainContent'>
+            <div id='content'>
+                <h1>The Integrated Thermodynamic Databank System</h1>
+                <p>FactSage©, one of the largest fully integrated database computing systems in chemical thermodynamics in the
+                    world, was introduced in 2001 and is the fusion of the FACT-Win/F*A*C*T and ChemSage/SOLGASMIX thermochemical
+                    packages. FactSage is the result of over 20 years of collaborative efforts between Thermfact/CRCT (Montreal,
+                    Canada) www.crct.polymtl.ca and GTT-Technologies (Aachen, Germany) www.gtt-technologies.de.</p>
+
+                <p>The FactSage package runs on a PC operating under Microsoft Windows® and consists of a series of information,
+                    database, calculation and manipulation modules that access various pure substances and solution databases.
+                    FactSage has several hundred industrial, governmental and academic users in materials science, pyrometallurgy,
+                    hydrometallurgy, electrometallurgy, corrosion, glass technology, combustion, ceramics, geology, etc.
+                    It is used internationally in graduate and undergraduate teaching and research.</p>
+
+                <p>Users have access to databases of thermodynamic data for thousands of compounds as well as to evaluated and
+                    optimized databases for hundreds of solutions of metals, liquid and solid oxide solutions, mattes, molten
+                    and solid salt solutions, aqueous solutions, etc. The FactSage software automatically accesses these
+                    databases. The evaluated databases for oxides, slags, mattes, etc. have been developed by optimization
+                    of literature data using advanced modeling techniques, several of which have been developed at the CRCT.
+                    FactSage can also access the databases for alloy solutions developed by the international SGTE Group,
+                    and the databases for steels, light metal alloys and other alloy systems developed by The Spencer Group,
+                    GTT-Technologies and the CRCT. For detailed information on the various databases click on Database Documentation.</p>
+
+                <p>With FactSage you can calculate the conditions for multiphase, multicomponent equilibria, with a wide variety
+                    of tabular and graphical output modes, under a large range of constraints. For example, general N-component
+                    phase diagram sections can be easily generated with a wide choice of axis variables; matte/metal/slag/gas/solid
+                    equilibria can be accurately calculated, tabulated and plotted for industrial systems; multicomponent
+                    predominance and EpH diagrams can be readily produced; the course of equilibrium or non-equilibrium solidification
+                    can be followed; complex heat balances can be computed; and so on.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <!-- Main javascript -->
+    <script type="text/javascript" src='./factsage.js'></script>
+</body>
+
+</html>
