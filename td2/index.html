@@ -14,10 +14,8 @@
     <link rel="stylesheet" href='/index.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
 
-
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-autocomplete/1.0.7/jquery.auto-complete.min.js"></script>
@@ -29,27 +27,35 @@
 
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">Vélo Montréal</a>
             </div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Accueil</a></li>
+                <li class="active">
+                    <a href="#">Accueil</a>
+                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="fa fa-globe"></span></a></li>
+                <li>
+                    <a class='darkOnHover' href="#">
+                        <span class="fa fa-globe"></span>
+                    </a>
+                </li>
             </ul>
         </div>
     </nav>
-
     <!-- Content -->
     <div class='container'>
         <ul class="nav nav-pills">
-            <li class="active"><a data-toggle="pill" href="#home">Carte des stations</a></li>
-            <li><a data-toggle="pill" href="#menu1">Liste des stations</a></li>
+            <li class="active">
+                <a data-toggle="pill" href="#home">Carte des stations</a>
+            </li>
+            <li>
+                <a data-toggle="pill" href="#menu1">Liste des stations</a>
+            </li>
         </ul>
-
         <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
                 <div class='container'>
@@ -73,7 +79,7 @@
                                                     <span>ID Station</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat'>6173</span>
+                                                    <span id='stationId' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -83,7 +89,7 @@
                                                     <span>Vélos displonibles</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat alt-color'>0</span>
+                                                    <span id='stationVelosDisponibles' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -95,7 +101,7 @@
                                                     <span>Bloquée</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat'>Non</span>
+                                                    <span id='stationBloquee' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -105,7 +111,7 @@
                                                     <span>Bornes displonibles</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat'>3</span>
+                                                    <span id='stationBornesDisponibles' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -117,7 +123,7 @@
                                                     <span>Suspendue</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat alt-color'>Oui</span>
+                                                    <span id='stationSuspendue' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -127,7 +133,7 @@
                                                     <span>Vélo indisponible</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat'>1</span>
+                                                    <span id='stationVelosIndisponibles' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -139,7 +145,7 @@
                                                     <span>Hors service</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat'>Non</span>
+                                                    <span id='stationHorsService' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -149,7 +155,7 @@
                                                     <span>Bornes indisponibles</span>
                                                 </div>
                                                 <div class='col-etat'>
-                                                    <span class='data-etat'>23</span>
+                                                    <span id='stationBornesIndisponibles' class='data-etat'>-</span>
                                                 </div>
                                             </div>
                                         </td>
@@ -159,6 +165,7 @@
                         </div>
                     </div>
                 </div>
+                <div id='map'></div>
             </div>
             <div id="menu1" class="tab-pane fade">
                 <h1>État de toutes les stations de vélos</h1>

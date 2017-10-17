@@ -1,5 +1,30 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    background-color: #00A8E6;
+    border: none;
+    border-radius: 0;
+    height: 50px;
+}
+
+.navbar * {
+    color: #ffffff !important;
+}
+
+.navbar .active a {
+    background-color: #0068AE !important;
+}
+
 .fa-globe {
     font-size: 20px;
+}
+
+.darkOnHover:hover * {
+    color: #333 !important;
 }
 
 .nav-pills {
@@ -30,11 +55,11 @@
 }
 
 .blue {
-    color: blue;
+    color: #00A8E6;
 }
 
 .blue-background {
-    background-color: blue;
+    background-color: #00A8E6;
     height: 20px;
 }
 
@@ -62,4 +87,12 @@
 
 .alt-color {
     background-color: red;
+}
+
+#map {
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
