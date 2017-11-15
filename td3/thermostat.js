@@ -16,9 +16,10 @@ $(function () {
 
     function chrono() {
         setInterval(() => {
+            console.log(chauffage);
             $('#tdValeurThermostat').html(thermoVal);
-            $('.temperature').html(positionThermometre);
-            $('.innerThermometre').css('height', (`${(positionThermometre * 100) / (thermometreMax - thermometreMin)}%`));
+            $('.temperature').html(Math.round(temperatureInterieure));
+            $('.innerThermometre').css('height', (`${(temperatureInterieure * 100) / (thermometreMax - thermometreMin)}%`));
             $('#chaffage').html(chauffage ? 'Actif' : 'Inactif');
             $('#tempExt').html(temperatureExterieure);
             ticTac();
