@@ -9,7 +9,6 @@ $(function () {
     var thermoVal = temperatureThermostat;
     $('#tdValeurThermostat').html(thermoVal);
 
-
     $("#slider").on("slide", function (event, ui) {
         thermoVal = ui.value;
     });
@@ -20,7 +19,8 @@ $(function () {
             $('#tdValeurThermostat').html(thermoVal);
             $('.temperature').html(Math.round(temperatureInterieure));
             $('.innerThermometre').css('height', (`${(temperatureInterieure * 100) / (thermometreMax - thermometreMin)}%`));
-            $('#chaffage').html(chauffage ? 'Actif' : 'Inactif');
+            $('#chauffage').html(chauffage ? 'Actif' : 'Inactif');
+            $('#chauffage').css('background-color', chauffage ? '#FF0000' : 'white');
             $('#tempExt').html(temperatureExterieure);
             ticTac();
         }, intervalleTemps);
