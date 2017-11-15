@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thermostat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="/thermostat.css">
+</head>
+
+<body>
+    <div class='row'>
+        <!-- Thermometre -->
+        <div class='column fix'>
+            <div class='thermometre'>
+                <div class='innerThermometre'></div>
+                <span class='temperature'>25</span>
+            </div>
+            <span class='label'>Thermomètre</span>
+        </div>
+
+        <!-- Mesures -->
+        <div class='column mesures'>
+            <div class='row'>
+                <span class='attribute'>Chauffage</span>
+                <span id='chauffage'>Actif</span>
+            </div>
+            <div class='row'>
+                <span class='attribute'>Température extérieure</span>
+                <span id='tempExt'>0</span>
+            </div>
+            <div class='row'>
+                <span class='attribute'>Thermostat</span>
+                <span id='tdValeurThermostat'>20</span>
+            </div>
+        </div>
+
+        <!-- Thermostat -->
+        <div class='column fix'>
+            <div class='row'>
+                <div id="slider"></div>
+                <div class='paddingLeft'>
+                    <span>30</span>
+                    <span>20</span>
+                    <span>10</span>
+                    <span>0</span>
+                    <span>- 10</span>
+                </div>
+            </div>
+            <span class='label'>Thermostat</span>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="chambre.js"></script>
+    <script src="thermostat.js"></script>
+</body>
+
+</html>
