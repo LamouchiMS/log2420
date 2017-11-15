@@ -6,19 +6,24 @@ $(function () {
         step: 10,
         value: temperatureThermostat
     });
+    var thermoVal = temperatureThermostat;
+    $('#tdValeurThermostat').html(thermoVal);
+
 
     $("#slider").on("slide", function (event, ui) {
-        chrono(ui.value);
+        thermoVal = ui.value;
     });
 
-    function chrono(val) {
-        setTimeout(() => {
-            $('#tdValeurThermostat').html(val);
+    function chrono() {
+        setInterval(() => {
+            $('#tdValeurThermostat').html(thermoVal);
             $('.temperature').html(positionThermometre);
             $('.innerThermometre').css('height', (`${(positionThermometre * 100) / (thermometreMax - thermometreMin)}%`));
             $('#chaffage').html(chauffage ? 'Actif' : 'Inactif');
             $('#tempExt').html(temperatureExterieure);
-            $('#tdValeurThermostat').html(temperatureThermostat);
+            ticTac();
         }, intervalleTemps);
     }
+
+    chrono();
 });
