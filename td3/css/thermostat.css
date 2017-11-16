@@ -75,7 +75,7 @@ body {
     top: 50%;
 	transform: rotate(270deg);
     transform-origin: left top 10;
-    color: grey;
+    color: white;
 }
 
 .mesures {
